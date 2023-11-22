@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body::-webkit-scrollbar {
+  display: none;
+}
+.collapsible {
+  transition: max-height 0.3s ease-out;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.collapsible.closed {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.collapsible.open {
+  max-height: 500px; /* Adjust this value based on your content's height */
+}
